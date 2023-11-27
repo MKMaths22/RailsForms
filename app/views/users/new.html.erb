@@ -1,1 +1,11 @@
-Hello this is a view.
+Please enter your details.
+
+<%= form_tag "/users" do %>
+  <%= label_tag "Username" %><br>
+  <%= text_field(:user, :username) %><br>
+  <%= label_tag "Password" %><br>
+  <%= password_field(:user, :password) %><br>
+  <%= label_tag "Email" %><br>
+  <%= email_field(:user, :email) %><br>
+  <%= button_tag "Submit" %>
+<% end %>
