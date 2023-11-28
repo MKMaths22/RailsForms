@@ -1,0 +1,11 @@
+Please update your details.
+
+<%= form_with model: @user do |form| %>
+  <%= label(:user, :username, "Your Username") %>
+  <%= form.text_field :username %>
+  <%= label(:user, :password, "Make your password") %>
+  <%= form.password_field :password %>
+  <%= label(:user, :email) %>
+  <%= form.email_field :email, placeholder: "peter.hawes@email.co.uk" %>
+  <%= form.submit "Submit" %>
+<% end %>
