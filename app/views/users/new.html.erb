@@ -1,11 +1,21 @@
 Please enter your details.
 
-<%= form_tag "/users" do %>
-  <%= label_tag "Username" %><br>
-  <%= text_field(:user, :username) %><br>
-  <%= label_tag "Password" %><br>
-  <%= password_field(:user, :password) %><br>
-  <%= label_tag "Email" %><br>
-  <%= email_field(:user, :email) %><br>
-  <%= button_tag "Submit" %>
+<%# form_tag "/users" do %>
+  <%# label_tag "Username" %><br>
+  <%# text_field(:user, :username) %><br>
+  <%# label_tag "Password" %><br>
+  <%# password_field(:user, :password) %><br>
+  <%# label_tag "Email" %><br>
+  <%# email_field(:user, :email) %><br>
+  <%# button_tag "Submit" %>
+<%# end %>
+
+<%= form_with model: @user do |form| %>
+  <%= label(:user, :username, "Your Username") %>
+  <%= form.text_field :username %>
+  <%= label(:user, :password, "Make your password") %>
+  <%= form.password_field :password %>
+  <%= label(:user, :email) %>
+  <%= form.email_field :email, placeholder: "peter.hawes@email.co.uk" %>
+  <%= form.submit "Submit" %>
 <% end %>
