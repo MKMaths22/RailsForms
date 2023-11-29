@@ -9,7 +9,6 @@ Please enter your details.
   <%# email_field(:user, :email) %><br>
   <%# button_tag "Submit" %>
 <%# end %>
-
 <%= form_with model: @user do |form| %>
   <%= label(:user, :username, "Your Username") %>
   <%= form.text_field :username %>
