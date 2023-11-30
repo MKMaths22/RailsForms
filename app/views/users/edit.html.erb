@@ -1,4 +1,16 @@
 Please update your details.
+
+<% if @user.errors.any? %>
+    <div id="error_summary">
+      <h2><%= pluralize(@user.errors.count, "error") %> prevented your details from being updated:</h2>
+      <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <%= form_with model: @user, local: true do |form| %>
   <br>
   <%= label(:user, :username, "Your Username") %><br>

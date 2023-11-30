@@ -10,6 +10,18 @@ Please enter your details.
 <%# end %>
 <%= form_with model: @user do |form| %>
   <br>
+
+  <% if @user.errors.any? %>
+    <div id="error_summary">
+      <h2><%= pluralize(@user.errors.count, "error") %> prevented your details from being saved:</h2>
+      <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= label(:user, :username, "Your Username") %><br>
   <%= form.text_field :username %><br>
   <%= label(:user, :password, "Make your password") %><br>
