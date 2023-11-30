@@ -1,0 +1,9 @@
+/* Styles go here for the Users */
+
+* {
+  padding: 0;
+}
+
+.field_with_errors {
+  display: inline;
+}

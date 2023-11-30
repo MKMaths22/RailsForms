@@ -1,5 +1,4 @@
 Please enter your details.
-
 <%# form_tag "/users" do %>
   <%# label_tag "Username" %><br>
   <%# text_field(:user, :username) %><br>
@@ -10,11 +9,11 @@ Please enter your details.
   <%# button_tag "Submit" %>
 <%# end %>
 <%= form_with model: @user do |form| %>
-  <%= label(:user, :username, "Your Username") %>
-  <%= form.text_field :username %>
-  <%= label(:user, :password, "Make your password") %>
-  <%= form.password_field :password %>
-  <%= label(:user, :email) %>
-  <%= form.email_field :email, placeholder: "peter.hawes@email.co.uk" %>
-  <%= form.submit "Submit" %>
+  <%= label(:user, :username, "Your Username") %><br>
+  <%= form.text_field :username %><br>
+  <%= label(:user, :password, "Make your password") %><br>
+  <%= form.password_field :password %><br>
+  <%= label(:user, :email) %><br>
+  <%= form.email_field :email, placeholder: "peter.hawes@email.co.uk" %><br>
+  <%= form.submit "Submit" %><br>
 <% end %>
