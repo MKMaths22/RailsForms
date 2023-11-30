@@ -1,14 +1,15 @@
 Please enter your details.
 <%# form_tag "/users" do %>
-  <%# label_tag "Username" %><br>
-  <%# text_field(:user, :username) %><br>
-  <%# label_tag "Password" %><br>
-  <%# password_field(:user, :password) %><br>
-  <%# label_tag "Email" %><br>
-  <%# email_field(:user, :email) %><br>
+  <%# label_tag "Username" %>
+  <%# text_field(:user, :username) %>
+  <%# label_tag "Password" %>
+  <%# password_field(:user, :password) %>
+  <%# label_tag "Email" %>
+  <%# email_field(:user, :email) %>
   <%# button_tag "Submit" %>
 <%# end %>
 <%= form_with model: @user do |form| %>
+  <br>
   <%= label(:user, :username, "Your Username") %><br>
   <%= form.text_field :username %><br>
   <%= label(:user, :password, "Make your password") %><br>
